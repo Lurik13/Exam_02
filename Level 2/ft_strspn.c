@@ -6,7 +6,7 @@
 /*   By: lribette <lribette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 17:04:53 by lribette          #+#    #+#             */
-/*   Updated: 2023/12/05 17:10:39 by lribette         ###   ########.fr       */
+/*   Updated: 2023/12/05 17:12:58 by lribette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 #include <stdio.h>
 
 size_t	ft_strspn(const char *s, const char *accept);
-
-int ft_strlen(const char *str)
-{
-	int i;
-	
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
