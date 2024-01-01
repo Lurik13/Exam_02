@@ -6,7 +6,7 @@
 /*   By: lribette <lribette@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 13:45:46 by lribette          #+#    #+#             */
-/*   Updated: 2024/01/01 14:24:41 by lribette         ###   ########.fr       */
+/*   Updated: 2024/01/01 14:28:48 by lribette         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int	value_of(char c)
 		return (c - 'a' + 10);
 	if (c >= 'A' && c <= 'F')
 		return (c - 'A' + 10);
-	return (0);
+	else
+		return (-1);
 }
 
 int	ft_atoi_base(const char *str, int str_base)
@@ -39,6 +40,8 @@ int	ft_atoi_base(const char *str, int str_base)
 	}
 	while (str[i])
 	{
+		if (value_of(str[i]) == -1)
+			break ;
 		number = number * str_base + value_of(str[i]);
 		i++;
 	}
